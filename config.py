@@ -1,0 +1,1 @@
+background_img='GUI-resources/pureblack.jpeg'
