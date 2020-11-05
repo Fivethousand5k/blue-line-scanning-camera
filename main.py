@@ -55,6 +55,10 @@ class Scanning_camera(QtWidgets.QMainWindow,Ui_Form):
 
     def pause(self):
         self.playing=False
+
+    def close(self):
+        self.playing=False
+        self.working=False
     def play(self):
         '''
         this function would be triggered by the function 'online' and run as a thread.
@@ -107,7 +111,8 @@ class Scanning_camera(QtWidgets.QMainWindow,Ui_Form):
                     break
             time.sleep(0.05)
 
-
+    def closeEvent(self, event):
+        self.close()
 
 if __name__ == '__main__':
     if __name__ == '__main__':
